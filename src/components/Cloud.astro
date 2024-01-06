@@ -1,0 +1,20 @@
+---
+interface Props {
+  imgCloud: string;
+  imgAlt: string;
+  nameCloud: string;
+  borders: string;
+}
+const {imgCloud, imgAlt, nameCloud, borders} = Astro.props
+---
+<div
+  class=`w-[100px] h-[85px] flex justify-around items-center flex-col ${borders} border-dashed border-blue-3 md:w-[200px] md:h-[137px]`
+>
+  <img
+    src={imgCloud}
+    alt={imgAlt}
+    width="30px"
+    class="md:w-[68px]"
+  />
+  <p class="text-blue-2 pb-2 md:text-xl">{nameCloud}</p>
+</div>
