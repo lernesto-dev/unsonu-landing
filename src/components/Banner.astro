@@ -1,10 +1,59 @@
-<section class="flex flex-col w-full h-full justify-center items-center overflow-hidden">
-  <h1 class="text-blue-2 text-2xl max-w-[70%] text-center">Gestiona tus nubes de almacenamiento en una sola plataforma</h1>
-  <img src="/assets/Dashboard.png" alt="Dashboard unsonu" width="331.69px" class="-rotate-6 translate-x-14 mt-14 z-0"/>
+<section
+  class="flex flex-col w-full h-full justify-around items-center overflow-hidden"
+>
+  <h1 class="text-blue-2 text-2xl max-w-[70%] text-center">
+    Gestiona tus nubes de almacenamiento en una sola plataforma
+  </h1>
+  <div class="h-1">
+    <img
+      src="/assets/Dashboard.png"
+      alt="Dashboard unsonu"
+      width="331.69px"
+      class="slide-in-elliptic-right-fwd mt-14 z-0"
+    />
+  </div>
 </section>
 
 <style>
   h1 {
-    font-family: 'Dangrek', sans-serif;
+    font-family: "Dangrek", sans-serif;
+  }
+  .slide-in-elliptic-right-fwd {
+    -webkit-animation: slide-in-elliptic-right-fwd 1.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-elliptic-right-fwd 1.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes slide-in-elliptic-right-fwd {
+    0% {
+      -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+      transform: translateX(800px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+      transform-origin: -100% 50%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(3.5rem) rotate(-6deg) scale(1);
+      transform: translateX(3.5rem) rotate(-6deg) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+      transform-origin: -1800px 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-right-fwd {
+    0% {
+      -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+      transform: translateX(800px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+      transform-origin: -100% 50%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(3.5rem) rotate(-6deg) scale(1);
+      transform: translateX(3.5rem) rotate(-6deg) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+      transform-origin: -1800px 50%;
+      opacity: 1;
+    }
   }
 </style>
