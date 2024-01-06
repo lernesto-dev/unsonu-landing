@@ -29,11 +29,11 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
       <div class="w-[1px] h-[50px] border bg-blue-2 md:h-[100px]"></div>
       <div class="flex-1 flex flex-col justify-around">
         <div class="flex gap-1">
-          <img src="assets/check.svg" alt="icon check" />
+          <img src="assets/check.svg" alt="icon check" class="md:w-[20px] md:mx-1"/>
           <p class="text-blue-2 text-xs md:text-xl">{limit} GB de trafico de datos</p>
         </div>
         <div class="flex gap-1">
-          <img src="assets/check.svg" alt="icon check" />
+          <img src="assets/check.svg" alt="icon check" class="md:w-[20px] md:mx-1"/>
           <p class="text-blue-2 text-xs md:text-xl">Soporte para {accounts} cuentas</p>
         </div>
       </div>
