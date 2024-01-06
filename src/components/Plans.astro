@@ -3,7 +3,11 @@ import Plan from "./Plan.astro";
 ---
 
 <section id="plans">
-  <Plan
+  <h2 class="text-blue-2 text-2xl w-[50%] mx-auto text-center mb-12 md:text-5xl">
+    Planes
+  </h2>
+  <div class="md:flex">
+    <Plan
     title="Gratis"
     description="Deja de saltar entre plataformas y obtén todo en un solo lugar"
     price="De por vida"
@@ -19,4 +23,5 @@ import Plan from "./Plan.astro";
     accounts={10}
     icon="start"
   />
+  </div>
 </section>

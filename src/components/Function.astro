@@ -1,0 +1,63 @@
+---
+    interface Props {
+      containerClass: string;
+      imgFunction: string;
+      altImgFunction: string;
+      animationImg: string;
+      animationText: string;
+      textFunction: string;
+}
+
+const { containerClass, imgFunction, altImgFunction, animationImg, animationText, textFunction } = Astro.props;
+---
+<div class=`flex flex-col justify-center items-center md:max-w-[80%] md:m-auto md:justify-around ${containerClass}`>
+  <img
+    src={imgFunction}
+    alt={altImgFunction}
+    width="150px"
+    class=`${animationImg} md:w-[350px]`
+  />
+  <p
+    class=`mt-12 mb-14 text-base text-white text-center md:text-4xl md:max-w-[50%] ${animationText}`
+  >
+    {textFunction}
+  </p>
+</div>
+
+<style>
+  p {
+    font-family: "Encode Sans Expanded", sans-serif;
+  }
+  .function-animation-right {
+    view-timeline-name: --function-1;
+    view-timeline-axis: block;
+    animation-name: function-right-animation;
+    animation-timeline: --function-1;
+  }
+  .function-animation-left {
+    view-timeline-name: --function-left;
+    view-timeline-axis: block;
+    animation-name: function-left-animation;
+    animation-timeline: --function-left;
+  }
+  @keyframes function-right-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    75% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes function-left-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    40% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+</style>

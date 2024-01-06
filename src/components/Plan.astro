@@ -13,28 +13,28 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
 
 <a
   href=`https://app.unsonu.com/setings?plan=${title}`
-  class="w-[294px] h-[192px] border mx-auto flex flex-col justify-between rounded-2xl mb-5 slit-in-vertical"
+  class="w-[294px] h-[192px] border mx-auto flex flex-col justify-between rounded-2xl mb-5 slit-in-vertical md:w-[558px] md:h-[339px] md:rounded-3xl"
 >
   <div class="mt-5 mx-5 flex justify-between items-start">
     <div class="w-[80%]">
-      <h3 class="text-xl font-semibold text-blue-2">{title}</h3>
-      <p class="text-xs text-blue-2">{description}</p>
-      <span class="text-xs text-blue-2 font-bold">{price}</span>
+      <h3 class="text-xl font-semibold text-blue-2 md:text-4xl">{title}</h3>
+      <p class="text-xs text-blue-2 md:text-xl md:mt-6 md:mb-2">{description}</p>
+      <span class="text-xs text-blue-2 font-bold md:text-xl">{price}</span>
     </div>
-    <img src=`/assets/${icon}.svg` alt="cohete" width="32px" />
+    <img src=`/assets/${icon}.svg` alt="cohete" width="32px" class="md:w-[50px]"/>
   </div>
   <div class="flex justify-between items-end w-full">
-    <img src="/assets/plans.svg" alt="" width="72px" />
-    <div class="pb-2 pr-3 flex gap-2">
-      <div class="w-[1px] h-[50px] border bg-blue-2"></div>
+    <img src="/assets/plans.svg" alt="" width="72px" class="md:w-[154px]"/>
+    <div class="pb-2 pr-3 flex gap-2 md:pb-4">
+      <div class="w-[1px] h-[50px] border bg-blue-2 md:h-[100px]"></div>
       <div class="flex-1 flex flex-col justify-around">
         <div class="flex gap-1">
           <img src="assets/check.svg" alt="icon check" />
-          <p class="text-blue-2 text-xs">{limit} GB de trafico de datos</p>
+          <p class="text-blue-2 text-xs md:text-xl">{limit} GB de trafico de datos</p>
         </div>
         <div class="flex gap-1">
           <img src="assets/check.svg" alt="icon check" />
-          <p class="text-blue-2 text-xs">Soporte para {accounts} cuentas</p>
+          <p class="text-blue-2 text-xs md:text-xl">Soporte para {accounts} cuentas</p>
         </div>
       </div>
     </div>

@@ -1,92 +1,34 @@
-<section id="functions" class="w-[70%] mx-auto justify-center mt-40">
-  <div class="flex flex-col justify-center items-center">
-    <img
-      src="/assets/function1.svg"
-      alt="transferencia de archivos"
-      width="150px"
-      class="function-animation-right"
-    />
-    <p
-      class="mt-12 mb-14 text-base text-white text-center function-animation-left"
-    >
-      Transfiere tus archivos de una nube a otra fácilmente
-    </p>
-  </div>
-  <div class="flex flex-col justify-center items-center">
-    <img
-      src="/assets/function2.svg"
-      alt="transferencia de archivos"
-      width="150px"
-      class="function-animation-left"
-    />
-    <p
-      class="mt-12 mb-14 text-base text-white text-center function-animation-right"
-    >
-      Cambia entre tus almacenamientos rápido
-    </p>
-  </div>
-  <div class="flex flex-col justify-center items-center">
-    <img
-      src="/assets/function3.svg"
-      alt="transferencia de archivos"
-      width="150px"
-      class="function-animation-right"
-    />
-    <p
-      class="mt-12 mb-14 text-base text-white text-center function-animation-left"
-    >
-      Gestiona tus archivos en un solo lugar
-    </p>
-  </div>
-  <div class="flex flex-col justify-center items-center">
-    <img
-      src="/assets/function4.svg"
-      alt="transferencia de archivos"
-      width="150px"
-      class="function-animation-left"
-    />
-    <p
-      class="mt-12 mb-14 text-base text-white text-center function-animation-right"
-    >
-      Migra tus archivos fácilmente
-    </p>
-  </div>
-</section>
+---
+import Function from "./Function.astro";
+---
 
-<style>
-  section {
-    font-family: "Encode Sans Expanded", sans-serif;
-  }
-  .function-animation-right {
-    view-timeline-name: --function-1;
-    view-timeline-axis: block;
-    animation-name: function-right-animation;
-    animation-timeline: --function-1;
-  }
-  .function-animation-left {
-    view-timeline-name: --function-left;
-    view-timeline-axis: block;
-    animation-name: function-left-animation;
-    animation-timeline: --function-left;
-  }
-  @keyframes function-right-animation {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    75% {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-  @keyframes function-left-animation {
-    0% {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-    40% {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-  }
-</style>
+<section id="functions" class="w-[70%] mx-auto justify-center mt-40 md:w-[80%] md:mb-24">
+  <Function 
+    containerClass="md:flex-row-reverse"
+    imgFunction="/assets/function1.svg"
+    altImgFunction="transferencia de archivos"
+    animationImg="function-animation-right"
+    animationText="function-animation-left"
+    textFunction="Transfiere tus archivos de una nube a otra fácilmente." />
+    <Function 
+    containerClass="md:flex-row"
+    imgFunction="/assets/function2.svg"
+    altImgFunction="transferencia de archivos"
+    animationImg="function-animation-left"
+    animationText="function-animation-right"
+    textFunction="Cambia entre tus almacenamientos rápido." />
+    <Function 
+    containerClass="md:flex-row-reverse"
+    imgFunction="/assets/function3.svg"
+    altImgFunction="transferencia de archivos"
+    animationImg="function-animation-right"
+    animationText="function-animation-left"
+    textFunction="Gestiona tus archivos en un solo lugar." />
+    <Function 
+    containerClass="md:flex-row"
+    imgFunction="/assets/function4.svg"
+    altImgFunction="transferencia de archivos"
+    animationImg="function-animation-left"
+    animationText="function-animation-right"
+    textFunction="Migra tus archivos fácilmente." />
+</section>
