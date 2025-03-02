@@ -13,7 +13,7 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
 
 <a
   href=`https://app.unsonu.com/setings?plan=${title}`
-  class="w-[294px] h-[192px] border mx-auto flex flex-col justify-between rounded-2xl mb-5 slit-in-vertical md:w-[558px] md:h-[339px] md:rounded-3xl md:hover:bg-blue-3 md:max-w-[45%]"
+  class="w-[294px] h-[192px] border mx-auto flex flex-col justify-between rounded-2xl mb-5 slit-in-vertical md:w-[558px] md:h-[339px] md:rounded-3xl md:max-w-[45%] color-text"
 >
   <div class="mt-5 mx-5 flex justify-between items-start">
     <div class="w-[80%]">
@@ -26,7 +26,7 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
   <div class="flex justify-between items-end w-full">
     <img src="/assets/plans.svg" alt="" width="72px" class="md:w-[154px]"/>
     <div class="pb-2 pr-3 flex gap-2 md:pb-4">
-      <div class="w-[1px] h-[50px] border bg-blue-2 md:h-[100px]"></div>
+      <div class="w-[1px] h-[50px] md:h-[100px] divider-vertical"></div>
       <div class="flex-1 flex flex-col justify-around">
         <div class="flex gap-1">
           <img src="assets/check.svg" alt="icon check" class="md:w-[20px] md:mx-1"/>
@@ -46,6 +46,7 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
   p,
   span {
     font-family: "Encode Sans Expanded", sans-serif;
+    color: #232121;
   }
   .slit-in-vertical {
     view-timeline-name: --plans;
@@ -53,6 +54,12 @@ const { title, description, price, limit, accounts, icon } = Astro.props;
     -webkit-animation: slit-in-vertical 0.45s ease-out both;
     animation: slit-in-vertical 0.45s ease-out both;
     animation-timeline: --plans;
+  }
+  .divider-vertical {
+    background-color: #4B4848 !important;
+  }
+  .color-text {
+    border-color: #4B4848 !important;
   }
   @-webkit-keyframes slit-in-vertical {
     0% {
